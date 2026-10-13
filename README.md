@@ -8,6 +8,7 @@ The model compares deaths averted over 30 years (2023–2053) by population-wide
 
 ## Root scripts
 -  `run_all.sh`  Top-level entry point; runs pipeline stages (`params`, `main`, `static`, `mediator_figures`, `figures`; default `all`) by calling the scripts under `code/`.
+
 -  `code/run_main_pipeline.sh`  Orchestrates the projection pipeline: life-table runs (deterministic and Monte Carlo), Supplementary Tables 9-10, discounting, deterministic/structural/population sensitivities, expenditure, overlap, equity and figures; writes results under `results/`.
 -  `code/run_static_mediator.sh`  Orchestrates the mediator-level and static comparisons: per country x outcome depth runs, affordable-coverage depth, depth aggregation, and the CKD/T2D and IHD/stroke Monte Carlo shards merged into `results/figure2b_*.csv`.
 -  
