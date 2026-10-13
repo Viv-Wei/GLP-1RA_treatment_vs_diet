@@ -8,10 +8,9 @@ The model compares deaths averted over 30 years (2023–2053) by population-wide
 
 ## Root scripts
 -  `run_all.sh`  Top-level entry point; runs pipeline stages (`params`, `main`, `static`, `mediator_figures`, `figures`; default `all`) by calling the scripts under `code/`.
-
 -  `code/run_main_pipeline.sh`  Orchestrates the projection pipeline: life-table runs (deterministic and Monte Carlo), Supplementary Tables 9-10, discounting, deterministic/structural/population sensitivities, expenditure, overlap, equity and figures; writes results under `results/`.
 -  `code/run_static_mediator.sh`  Orchestrates the mediator-level and static comparisons: per country x outcome depth runs, affordable-coverage depth, depth aggregation, and the CKD/T2D and IHD/stroke Monte Carlo shards merged into `results/figure2b_*.csv`.
-  
+
 ---
 
 ## code
@@ -48,6 +47,7 @@ The model compares deaths averted over 30 years (2023–2053) by population-wide
 -  `lifetable_mc.py`  Runs sharded Monte Carlo draws by perturbing the flow and policy inputs and calling `lifetable_full.py`; writes `results/figure4_mc{tag}_cov{cov}_shard{N}.csv`.
 -  `summarise_annual_deaths.py`  Summarises annual quantiles across the Figure 4 Monte Carlo shards; writes `results/itt_1012/annual_deaths_averted.csv`.
 -  `t2d_incidence_arm.py`  Projects averted new T2D cases per year for the GLP-1 and diet arms from GBD T2D incidence, the trial hazard ratio and the dietary PAF; writes `results/t2d_incidence_arms.csv`.
+-  `t2d_mc.py`  Monte Carlo of averted new T2D cases for the dietary and GLP-1RA arms (sampling the T2D incidence hazard ratio and treatment retention); writes `results/itt_1012/t2d_mc_summary.csv`.
 
 ### 06_sensitivity/
 -  `discounting.py`  Applies 0 / 3 / 5% annual discounting to the Figure 4 Monte Carlo cumulative deaths; writes `results/itt_1012/sens_discount_itt.csv`.
