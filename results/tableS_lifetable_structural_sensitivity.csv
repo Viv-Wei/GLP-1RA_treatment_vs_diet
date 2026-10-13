@@ -1,9 +1,0 @@
-Supplementary Table. Sensitivity of life table results to structural assumptions.
-"Half-cycle correction: 50% of new cases exposed to same-cycle case fatality, testing the impact of acute-phase mortality from IHD and stroke. Background mortality adjustment: individuals in the diseased compartment may have higher competing mortality from other causes than the general population. We tested multiplying background mortality for the diseased compartment by 1.5, 2.0, and 3.0. Literature suggests all-cause mortality among CVD patients is approximately 1.5-2.0 times the general population rate. All scenarios at 20% coverage with the feasible dietary package, 19 countries pooled."
-
-Scenario,Diet (M),GLP-1 (M),Combo (M),Diet/GLP-1,Diet change (%),GLP-1 change (%),Ratio change (%)
-Base case,5.24,1.94,7.15,2.7,0.0,0.0,0.0
-Half-cycle correction for new cases,5.53,1.92,7.42,2.87,5.5,3.8,1.4
-Background mortality 1.5x for diseased,4.6,1.77,6.34,2.6,-12.2,-8.8,-3.7
-Background mortality 2.0x for diseased,4.12,1.62,5.71,2.54,-21.4,-16.5,-5.9
-Background mortality 3.0x for diseased,3.42,1.39,4.79,2.45,-34.7,-28.4,-9.3
