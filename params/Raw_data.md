@@ -1,6 +1,6 @@
 # Raw data
 
-The files below are not redistributed. Download them and place them at the paths shown before running the codes. 
+The files below are not redistributed. Download them and place them at the paths shown before running the root scripts. 
 
 ## Global Burden of Disease Study 2023 (IHME)
 
