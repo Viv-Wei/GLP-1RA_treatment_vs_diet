@@ -7,10 +7,10 @@ The model compares deaths averted over 30 years (2023–2053) by population-wide
 ---
 
 ## Root scripts
--  `run_main_pipeline.sh`  Orchestrates the projection pipeline: life-table runs (deterministic and Monte Carlo), Supplementary Tables 9-10, discounting, deterministic/structural/population sensitivities, expenditure, overlap, equity and figures; writes results under `results/`.
--  `run_static_mediator.sh`  Orchestrates the mediator-level and static comparisons: per country x outcome depth runs, affordable-coverage depth, depth aggregation, and the CKD/T2D and IHD/stroke Monte Carlo shards merged into `results/figure2b_*.csv`.
+-  `run_all.sh`  Top-level entry point; runs pipeline stages (`params`, `main`, `static`, `mediator_figures`, `figures`; default `all`) by calling the scripts under `code/`.
 
 ---
+
 ## code
 
 ### 01_burden/
@@ -75,6 +75,10 @@ The model compares deaths averted over 30 years (2023–2053) by population-wide
 -  `plot_suppfig3b_factor_bars.R`  Renders the stacked dietary-factor bars by offset segment from `results/f3cv_depth_*.csv`; writes `figures/figure3_all/foodbar_cv_*.{pdf,png}`.
 -  `plot_suppfig4_static.py`  Draws per-outcome static avertable-share comparisons (diet vs GLP-1 by scenario); writes `figures/suppfig4_static.{pdf,png}`.
 -  `plot_suppfig8_expenditure.R`  Renders radial bar charts of diet vs GLP-1 expenditure per death averted from `tables/tableS_cost_analysis.csv`; writes `figures/suppfig8_expenditure.{pdf,png}`.
+
+
+-  `run_main_pipeline.sh`  Orchestrates the projection pipeline: life-table runs (deterministic and Monte Carlo), Supplementary Tables 9-10, discounting, deterministic/structural/population sensitivities, expenditure, overlap, equity and figures; writes results under `results/`.
+-  `run_static_mediator.sh`  Orchestrates the mediator-level and static comparisons: per country x outcome depth runs, affordable-coverage depth, depth aggregation, and the CKD/T2D and IHD/stroke Monte Carlo shards merged into `results/figure2b_*.csv`.
 
 ---
 
